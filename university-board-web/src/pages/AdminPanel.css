@@ -1,0 +1,340 @@
+.admin-panel {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.admin-header {
+    margin-bottom: 30px;
+}
+
+.admin-title {
+    font-size: 1.8rem;
+    color: #111827;
+    margin-bottom: 5px;
+}
+
+.admin-subtitle {
+    color: #6b7280;
+    font-size: 0.95rem;
+}
+
+/* Вкладки */
+.admin-tabs {
+    display: flex;
+    gap: 10px;
+    border-bottom: 2px solid #e5e7eb;
+    margin-bottom: 30px;
+}
+
+.tab-btn {
+    background: none;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #6b7280;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.tab-btn:hover {
+    color: #2563eb;
+}
+
+.tab-btn.active {
+    color: #2563eb;
+}
+
+.tab-btn.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: #2563eb;
+    border-radius: 3px 3px 0 0;
+}
+
+.tab-badge {
+    background: #dc2626;
+    color: white;
+    font-size: 0.75rem;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.tab-badge.secondary {
+    background: #6b7280;
+}
+
+/* Пустое состояние */
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.empty-icon {
+    font-size: 4rem;
+    margin-bottom: 15px;
+}
+
+.empty-state h3 {
+    color: #374151;
+    margin-bottom: 8px;
+}
+
+.empty-state p {
+    color: #6b7280;
+}
+
+/* --- Вкладка модерации --- */
+.moderation-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.moderation-card {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    border-left: 4px solid #f59e0b;
+}
+
+.mod-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.mod-category {
+    background: #eff6ff;
+    color: #2563eb;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.mod-date {
+    color: #9ca3af;
+    font-size: 0.85rem;
+}
+
+.mod-title {
+    font-size: 1.2rem;
+    color: #111827;
+    margin-bottom: 10px;
+}
+
+.mod-content {
+    color: #4b5563;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    white-space: pre-wrap;
+}
+
+.mod-author {
+    background: #f9fafb;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    color: #374151;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.author-email {
+    color: #6b7280;
+    font-size: 0.85rem;
+}
+
+.author-role-badge {
+    padding: 2px 10px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-left: auto;
+}
+
+.mod-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.btn-approve {
+    background: #16a34a;
+    color: white;
+    padding: 10px 24px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-approve:hover {
+    background: #15803d;
+}
+
+.btn-reject {
+    background: #dc2626;
+    color: white;
+    padding: 10px 24px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-reject:hover {
+    background: #b91c1c;
+}
+
+/* --- Вкладка пользователей --- */
+.users-table-wrapper {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    overflow-x: auto;
+}
+
+.users-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.users-table thead {
+    background: #f9fafb;
+}
+
+.users-table th {
+    padding: 14px 16px;
+    text-align: left;
+    font-weight: 600;
+    color: #374151;
+    font-size: 0.9rem;
+    border-bottom: 2px solid #e5e7eb;
+}
+
+.users-table td {
+    padding: 14px 16px;
+    border-bottom: 1px solid #f3f4f6;
+    font-size: 0.9rem;
+    color: #4b5563;
+}
+
+.users-table tbody tr:hover {
+    background: #f9fafb;
+}
+
+.users-table tbody tr.banned-row {
+    background: #fef2f2;
+}
+
+.users-table tbody tr.banned-row:hover {
+    background: #fee2e2;
+}
+
+.user-fullname {
+    font-weight: 500;
+    color: #111827;
+}
+
+.user-email-cell {
+    color: #6b7280;
+    font-size: 0.85rem;
+}
+
+.role-select {
+    padding: 6px 10px;
+    border: 2px solid;
+    border-radius: 6px;
+    background: white;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    outline: none;
+}
+
+.status-active {
+    color: #16a34a;
+    font-weight: 500;
+    font-size: 0.85rem;
+}
+
+.status-banned {
+    color: #dc2626;
+    font-weight: 500;
+    font-size: 0.85rem;
+}
+
+.btn-ban {
+    background: #fee2e2;
+    color: #dc2626;
+    border: none;
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.2s;
+}
+
+.btn-ban:hover {
+    background: #fecaca;
+}
+
+.btn-ban.unban {
+    background: #d1fae5;
+    color: #065f46;
+}
+
+.btn-ban.unban:hover {
+    background: #a7f3d0;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .admin-tabs {
+        overflow-x: auto;
+    }
+
+    .tab-btn {
+        padding: 10px 16px;
+        font-size: 0.9rem;
+        white-space: nowrap;
+    }
+
+    .mod-actions {
+        flex-direction: column;
+    }
+
+    .btn-approve, .btn-reject {
+        width: 100%;
+    }
+
+    .users-table {
+        font-size: 0.85rem;
+    }
+
+    .users-table th,
+    .users-table td {
+        padding: 10px 8px;
+    }
+}

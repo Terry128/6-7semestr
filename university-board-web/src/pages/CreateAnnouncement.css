@@ -1,0 +1,135 @@
+.create-page {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.create-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    padding: 40px;
+    width: 100%;
+    max-width: 700px;
+}
+
+.create-title {
+    font-size: 1.8rem;
+    color: #111827;
+    margin-bottom: 8px;
+}
+
+.create-subtitle {
+    color: #6b7280;
+    margin-bottom: 30px;
+    font-size: 0.95rem;
+}
+
+.create-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.create-form .form-group {
+    position: relative;
+}
+
+.create-form select {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    background: white;
+    cursor: pointer;
+    transition: border-color 0.2s;
+}
+
+.create-form select:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+
+.create-form textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: inherit;
+    resize: vertical;
+    min-height: 120px;
+    transition: border-color 0.2s;
+}
+
+.create-form textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+
+.char-counter {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    font-size: 0.8rem;
+    color: #9ca3af;
+    pointer-events: none;
+}
+
+.form-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.btn-cancel {
+    background-color: #f3f4f6;
+    color: #374151;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-cancel:hover:not(:disabled) {
+    background-color: #e5e7eb;
+}
+
+.btn-cancel:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.moderation-notice {
+    display: flex;
+    gap: 12px;
+    background: #fef3c7;
+    border-left: 4px solid #f59e0b;
+    padding: 15px;
+    border-radius: 6px;
+    margin-top: 25px;
+    font-size: 0.9rem;
+    color: #92400e;
+    line-height: 1.5;
+}
+
+.notice-icon {
+    font-size: 1.3rem;
+    flex-shrink: 0;
+}
+
+@media (max-width: 600px) {
+    .create-card {
+        padding: 25px 20px;
+    }
+
+    .form-actions {
+        flex-direction: column-reverse;
+    }
+
+    .btn-cancel, .btn-submit {
+        width: 100%;
+    }
+}
